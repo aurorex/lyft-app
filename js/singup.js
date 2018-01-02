@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  // agregamos una clase para
-  $('#container-clave').css('display', 'none');
   // declaramos dos variables que tendran valor de false
   var validateInput = false;
   var validateSelect = false;
-  // evento para validar que solo se ingrese el numero de diez digitos 
+  // evento keyup  
   $('#input').on('keyup', function(event) {
-    var $lenghtInput = $(this).val().length ;
+    // inicializamos una variable con un valor por defecto de un digito
+    var $lenghtInput = ('0' + $(this).val()).length;
+    // validar que solo se ingrese el numero de diez digitos
     if ($lenghtInput === 10) {
       $('#button-singup').addClass('button-color');
       validateInput = true;
@@ -15,6 +15,7 @@ $(document).ready(function() {
       $('#button-singup').removeClass('button-color');
       validateInput = false;
     }
+    // validar para que no ingrese numero neperiano(e) y validar q sean diez digitos y si borra cualquier digito no habilitara hasta cumplir ambos
     if (event.keyCode === 8 && event.keycode !== 69 && $lenghtInput === 10) {
       $('#button-singup').addClass('button-color');
       validateInput = true;
@@ -26,19 +27,23 @@ $(document).ready(function() {
     $(this).clone().appendTo('.div-li');
     validateSelect = true;
   });
+  // funcion para retornar un numero aleatoriamente y teniendo un min y max para que sean de tres digitos
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
   // evento  del button nos enviara a la siguiente página con el código lab 
   $('#button-singup').on('click', function() {
+    // si se cumple la condicion de que ambas variables son true,se mostrara nuestro codigo lab son un alert y se habilitara el button
     if (validateInput === true && validateSelect === true) {
       var clave = getRandomInt(100, 999);
+      // guardar la clave(codigo LAB) en la base de datos del navegador
+      localStorage.setItem('clave', clave);
+      // agregando propiedades de color al button
       $('#button-singup').addClass('button-color');
-      $('#container-clave').css('display','block');
       $('#clave').append(clave);
-      setTimeout(function() {
-        window.location.href = '../views/labcode.html';
-      }, 3000);  
+      // se envia un alert con la clave random
+      alert('tu código LAB: ' + clave);
+      window.location.href = '../views/labcode.html';
     }
   });
   // evento para el icono que redirecciona a la pagina anterior
