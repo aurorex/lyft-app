@@ -16,10 +16,14 @@ $(document).ready(function() {
   $('.input-email').on('keyup', function() {
    
   });
-  $('#checkbox').on('click', function() {
+  $('#checkbox').on('click', function(event) {
     validateCheckbox = true;
     console.log(validateCheckbox);
-
+    var aceptTerms = $('.label-checkbox').is(':checked');
+    if (!aceptTerms) {
+      alert('Debe aceptar las condiciones');
+      event.preventDefault();
+    }
   });
   $('.button').on('click', function() {
     if (validateName === false && validateEmail === true) {

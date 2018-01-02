@@ -132,3 +132,21 @@
   padding: 10px 30px;
   color: #333447;
 }
+
+/* clases para el archivo login.html */
+.lab-word{
+  display: inline-block; 
+}
+
+#input-lab{
+  outline: none;
+  border-bottom-color: #ff00bf !important;
+}
+
+.div-button{
+  margin: 5% 0;
+}
+
+.button-resendcode{
+  background-color: gainsboro;
+}
