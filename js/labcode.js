@@ -30,4 +30,8 @@ $(document).ready(function() {
   $('.button').on('click', function() {
     window.location.href = '../views/login.html';
   });
+  // evento para el icono que redirecciona a la pagina anterior
+  $('.glyphicon-chevron-left').on('click', function() {
+    window.location.href = '../views/singup.html';
+  });
 });
