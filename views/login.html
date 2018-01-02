@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body class="blue text-center">
+  <!-- estructura del header 'login' -->
+    <header>
+      <div class="container ">
+        <div class="row">
+          <div class="text-left">
+            <span class="glyphicon glyphicon-chevron-left pink "></span> 
+          </div>
+          <h1 class="title">Sing Up</h1>
+        </div>
+        <div class="row">
+          <h3>Join now for free ride credit</h3>
+        </div>
+      </div>
+    </header>
+    <hr>
+    <br>
+    <br>
+  <!-- estructura del section 'login' -->
+    <section>
+      <div class="container container-login">
+        <div class="row input-group">
+          <span class="input-group-addon"><strong>User</strong></span>
+          <input type="text" class="form-control input-name" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status" placeholder="First name/Last name">
+        </div>
+        <br>
+        <div class="row input-group ">
+          <span class="input-group-addon "><strong>@</strong></span>
+          <input type="text" class="form-control input-email" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status" placeholder="Email">
+        </div>
+        <br>
+        <div class="row form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input id="checkbox" type="checkbox">I agree to Lyft´ss<a href="">Terms of Service</a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <!-- estructura del footer 'sing-up' -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <button class="btn btn-default button border-none" data-toggle="modal" data-target="#myModal"><strong>Next</strong></button>
+        </div>
+      </div>
+      <!--Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+          <div class="modal-content button-color">
+            <div class="modal-body">
+              <img  class="logo-lyft" src="../assets/images/logo-white.png" alt="">
+              <h1>his registration was successful!</h1>
+              <span class="glyphicon glyphicon-ok "></span>   
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-defaul button-modal" data-dismiss="modal"><strong>Acept</strong></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="../vendors/js/jquery-3.2.1.min.js"></script>
+    <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+  </body>
+</html>

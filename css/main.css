@@ -4,7 +4,131 @@
   margin: 0;
 }
 
+/* clases reutilizables */
+.blue{
+  color: #333447;
+}
+
+.pink{
+  color:#ff00bf;
+}
+
+.display{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.title{
+  line-height: 100px;
+}
+
+.border-none{
+  outline: none;
+  border: none;
+}
+
+.button{
+  margin: 1%;
+  width: 50%;
+  height: 50%;
+  background-color: gainsboro;
+  font-size: 20px;
+}
+
+.button-color{
+  background-color:#ff00bf;
+  color: white  
+}
+
+/* clases para el archivo index.html */
+.body-index{
+  background-color: #333447;
+}
+
+.logo-lyft{
+  margin: 20%;
+  width:50% ;
+  height:50% ; 
+}
+
+/* clases para el archivo init.html */
 .fondo-body{
-  background-image: url(../assets/images/init-fondo.jpg);
-  
+  background-image: url(../assets/images/fondo-init.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;    
+  background-position: center center;
+  height: 100vh;
+}
+
+.logo-header{
+  margin: 20px;
+  width:30% ;
+  height:30% ; 
+}
+
+.button-init{
+  margin: 5% 0 5% 5% ;
+  padding: 10px 5px;
+  width:30% ;
+  height:20% ;
+  font-size:20px;
+  outline-color: white;
+  background-color: transparent;
+  color: white;
+}
+
+.button-init:hover{
+  outline-color: white;
+  background-color:#ff00bf;
+  color: white 
+}
+
+/* clases para el archivo singup.html */
+.glyphicon-chevron-left{
+  font-size: 40px;
+  margin: 5px 10%;
+  padding: 1px 5px;
+  border: 1px solid #ff00bf;
+  border-radius: 2px;
+}
+
+.div-singup{
+  margin: 5%;
+}
+
+.div-input, .div-select{
+  display: inline-block;
+  border:1px solid #ff00bf;
+}
+
+.div-input{
+  height: 50px;
+}
+
+#input{
+  width: 80%;
+  height: 30px;
+  outline: none;
+  border-bottom-color: aquamarine !important;
+}
+
+.div-select{
+  height:50px;
+  width: 20%;
+}
+
+/* clases para el archivo login.html */
+.container-login{
+  padding: 0 25%;
+}
+
+.glyphicon-ok{
+  font-size: 100px;
+}
+
+.button-modal{
+  margin: 0 40%;
+  padding: 10px 30px;
+  color: #333447;
 }
