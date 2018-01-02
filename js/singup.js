@@ -6,6 +6,7 @@ $(document).ready(function() {
   $('#input').on('keyup', function(event) {
     // inicializamos una variable con un valor por defecto de un digito
     var $lenghtInput = ('0' + $(this).val()).length;
+    console.log($lenghtInput);
     // validar que solo se ingrese el numero de diez digitos
     if ($lenghtInput === 10) {
       $('#button-singup').addClass('button-color');
