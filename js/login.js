@@ -1,39 +1,27 @@
 $(document).ready(function() {
-  var validateName = false;
-  var validateEmail = false;
-  var validateCheckbox = false;
-  $('.input-name').on('keyup', function(event) {
-    var $inputName = $(this).val();
-    console.log($inputName.length);
-    if (event.keyCode >= 48 && event.keyCode < 58 || $inputName === ''|| $inputName.length < 5) {
+  var boolName = false;
+  var boolEmail = false;
+  $('.input-name , .input-email').on('keyup', function() {
+    if ($('.input-name').val().match(/^[a-zA-Z\s]+$/)) {
+      boolName = true; 
+    } else {
+      boolName = false;
+    }
+    if ($('.input-email').val().match(/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/)) {
+      boolEmail = true;    
+    } else {
+      boolEmail = false;    
+    }
+    if (boolName && boolEmail) {
+      $('.button').removeAttr('disabled');
       $('.button').addClass('button-color');
-      validateName = false;
+    } else {
+      $('.button').attr('disabled', 'disabled');
+      $('.button').removeClass('button-color');
     }
-    else {
-      validateName = true;
-    }
-  });
-  $('.input-email').on('keyup', function() {
-   
-  });
-  $('#checkbox').on('click', function(event) {
-    validateCheckbox = true;
-    console.log(validateCheckbox);
-    var aceptTerms = $('.label-checkbox').is(':checked');
-    if (!aceptTerms) {
-      alert('Debe aceptar las condiciones');
-      event.preventDefault();
-    }
-  });
-  $('.button').on('click', function() {
-    if (validateName === false && validateEmail === true) {
-      
-    }
-
   });
   // evento para el icono que redirecciona a la pagina anterior
   $('.glyphicon-chevron-left').on('click', function() {
     window.location.href = '../views/labcode.html';
-  });
-  
+  });  
 });
